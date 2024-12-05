@@ -4,18 +4,10 @@ public class Main {
     public static  void main(String[] args)
     {
         B objB = new B();
-        System.out.println(objB.meth()); // Calls method from class A
+        System.out.println(objB.meth()); // Calls overridden method in B
 
-        // Task 4: Override method meth of class A in class B
-        B objBOverridden = new B()
-        {
-            @Override
-            public String meth() {
-                return "Method is overridden in Extendend class B";
-            }
-        };
-
-        // Task 5: Call this overridden method from object of class B
-        System.out.println(objBOverridden.meth());
+        // Task 5: Call the overridden method
+        String result = objB.meth();
+        System.out.println(result);
     }
 }
